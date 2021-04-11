@@ -2,6 +2,10 @@ package br.com.rtrancoso.springboot.base.utils;
 
 public class EmailValidator {
 
+    private EmailValidator() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static boolean validate(String email) {
         if (isParameterInvalid(email)) {
             return false;

@@ -5,6 +5,10 @@ import java.util.List;
 
 public class CPFValidator {
 
+    private CPFValidator() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static boolean validate(final String cpf) {
         if (isParameterInvalid(cpf) || isParameterSizeInvalid(cpf) || isAnyDefault(cpf)) {
             return false;
