@@ -2,6 +2,10 @@ package br.com.rtrancoso.springboot.base.utils;
 
 public class CNPJValidator {
 
+    private CNPJValidator() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static boolean validate(final String cnpj) {
         if (isParameterInvalid(cnpj) || isParameterSizeInvalid(cnpj)) {
             return false;
